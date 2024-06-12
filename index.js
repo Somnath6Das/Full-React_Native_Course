@@ -16,5 +16,7 @@ import ActivityIndicatorComp from './src/ActivityIndicatorComp';
 import AlertComp from './src/AlertComp';
 import CustomMain from './src/components/custom/CustomMain';
 import StyleSheetComp from './src/components/styleComp/StyleSheetComp';
+import Multistyle from './src/components/mutiStyleComp/Multistyle';
+import MainBox from './src/components/FlexLayout/MainBox';
 
-AppRegistry.registerComponent(appName, () => StyleSheetComp);
+AppRegistry.registerComponent(appName, () => MainBox);
