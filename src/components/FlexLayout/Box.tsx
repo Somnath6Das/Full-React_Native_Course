@@ -18,6 +18,8 @@ export default Box;
 
 const styles = StyleSheet.create({
   box: {
+    width: 100,
+    height: 100,
     backgroundColor: 'fff',
     padding: 20,
   },
@@ -25,5 +27,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
+    
   },
 });

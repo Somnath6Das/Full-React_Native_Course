@@ -18,5 +18,7 @@ import CustomMain from './src/components/custom/CustomMain';
 import StyleSheetComp from './src/components/styleComp/StyleSheetComp';
 import Multistyle from './src/components/mutiStyleComp/Multistyle';
 import MainBox from './src/components/FlexLayout/MainBox';
+import MainRelativeAbsolute from './src/components/FlexLayout/MainRelativeAbsolute';
+import MainResponsive from './src/ResponsiveUI/MainResponsive';
 
-AppRegistry.registerComponent(appName, () => MainBox);
+AppRegistry.registerComponent(appName, () => MainResponsive);
