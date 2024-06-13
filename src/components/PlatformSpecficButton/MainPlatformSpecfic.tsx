@@ -1,19 +1,22 @@
+import CustomButtom from './CustomButton';
+
 import {StyleSheet, Text, View, SafeAreaView, Platform} from 'react-native';
 import React from 'react';
 
-const SafeAreaViewComp = () => {
+const MainPlatformSpecfic = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
         <View style={styles.box}>
           <Text style={styles.text}>Welcome</Text>
+          <CustomButtom title="Press Me" onPress={() => alert('Pressed')} />
         </View>
       </View>
     </SafeAreaView>
   );
 };
 
-export default SafeAreaViewComp;
+export default MainPlatformSpecfic;
 
 const styles = StyleSheet.create({
   safeContainer: {
@@ -24,11 +27,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'plum',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
-    // paddingTop: Platform.OS === 'ios' ? 25 : 0,
   },
-  box: {
-    padding: 20,
-  },
+  box: {padding: 20},
   text: {
     ...Platform.select({
       ios: {

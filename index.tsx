@@ -22,5 +22,6 @@ import MainRelativeAbsolute from './src/components/FlexLayout/MainRelativeAbsolu
 import MainResponsive from './src/ResponsiveUI/MainResponsive';
 import MainResponsiveOne from './src/ResponsiveUI/MainResponsiveOne';
 import SafeAreaViewComp from './src/ResponsiveUI/SafeAreaViewComp';
+import MainPlatformSpecfic from './src/components/PlatformSpecficButton/MainPlatformSpecfic';
 
-AppRegistry.registerComponent(appName, () => SafeAreaViewComp);
+AppRegistry.registerComponent(appName, () => MainPlatformSpecfic);
