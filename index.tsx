@@ -20,5 +20,7 @@ import Multistyle from './src/components/mutiStyleComp/Multistyle';
 import MainBox from './src/components/FlexLayout/MainBox';
 import MainRelativeAbsolute from './src/components/FlexLayout/MainRelativeAbsolute';
 import MainResponsive from './src/ResponsiveUI/MainResponsive';
+import MainResponsiveOne from './src/ResponsiveUI/MainResponsiveOne';
+import SafeAreaViewComp from './src/ResponsiveUI/SafeAreaViewComp';
 
-AppRegistry.registerComponent(appName, () => MainResponsive);
+AppRegistry.registerComponent(appName, () => SafeAreaViewComp);

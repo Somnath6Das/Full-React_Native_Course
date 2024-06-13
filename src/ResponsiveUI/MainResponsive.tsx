@@ -1,14 +1,38 @@
 import {StyleSheet, Text, View, Dimensions} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHight = Dimensions.get('window').height;
+// const windowWidth = Dimensions.get('window').width;
+// const windowHeight = Dimensions.get('window').height;
+
+// console.log('width:' + windowWidth, 'height:' + windowHeight);
 
 const MainResponsive = () => {
+  const [dimensions, setDimensions] = useState({
+    window: Dimensions.get('window'),
+  });
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({window}) => {
+      setDimensions({window});
+    });
+    return () => subscription?.remove();
+  });
+
+  const {window} = dimensions;
+
+  const windowWidth = window.width;
+  const windowHeight = window.height;
+
   return (
     <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Welcome!</Text>
+      <View
+        style={[
+          styles.box,
+          {
+            width: windowWidth > 500 ? '70%' : '90%',
+            height: windowHeight > 600 ? '60%' : '90%',
+          },
+        ]}>
+        <Text style={{fontSize: windowWidth > 500 ? 50 : 35}}>Welcome!</Text>
       </View>
     </View>
   );
@@ -24,13 +48,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: windowWidth > 500 ? '70%' : '90%',
-    height: windowHight > 600 ? '60%' : '90%',
+    // width: windowWidth > 500 ? '70%' : '90%',
+    // height: windowHight > 600 ? '60%' : '90%',
     backgroundColor: 'lightblue',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    fontSize: windowWidth > 500 ? 50 : 24,
+    // fontSize: windowWidth > 500 ? 50 : 24,
   },
 });
