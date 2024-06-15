@@ -27,5 +27,8 @@ import MainList from './src/List/MainList';
 import MainFlatList from './src/List/MainFlatList';
 import MainSelectionList from './src/List/MainSelectionList';
 import InputComp from './src/InputComp';
+import SwitchComp from './src/SwitchComp';
+import LoginForm from './src/LoginForm';
+import MainFlatListApi from './src/List/MainFlatListApi';
 
-AppRegistry.registerComponent(appName, () => InputComp);
+AppRegistry.registerComponent(appName, () => MainFlatListApi);
